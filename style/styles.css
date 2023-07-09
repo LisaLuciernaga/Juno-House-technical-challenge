@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'Modern Era';
+    src: url('fonts/modern-era-light.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Modern Era Bold';
+    src: url('fonts/modern-era-extrabold.ttf') format('truetype');
+  }
+  
+  /* @font-face {
+    font-family: 'Keroine';
+    src: url('keroine.ttf') format('truetype');
+  } ---unable to find font online */
+  
+nav {
+    background-color: #FEFDF6 !important;
+    font-family: Modern Era;
+    color: #000000 !important;
+}
+
+body {
+    color: #8E4B44;
+    background-color: #FFF;
+}
+
+.terracota-btn {
+    color: #8E4B44 !important;
+    border-radius: 17px;
+    border-color: #8E4B44;
+    text-decoration: none;
+}
+
+h2 {
+    font-family: Keroine;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 5px;
+}
+
+p {
+    color: #8E4B44;
+    font-family: Modern Era;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 5px;
+}
+
+a {
+    color: #9A675E;
+}
+
+strong {
+    font-family: Modern Era Bold;
+}
+
+.philosophy {
+    margin: 5px;
+    position: relative;
+}
+
+.philosophy>p {
+    position: relative;
+    bottom: 160px;
+}
+
+.philosophy>img {
+    width: 100%;
+    margin: auto;
+}
+
+#banner {
+    width: 100%;
+}
+
+#membership {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#juno-club {
+    width: 504px;
+    height: 422px;
+    flex-shrink: 0; 
+    background-color: #CEA7A2;
+    color: #FFFEF6;
+    text-align: center;
+    border: #000000 5px;
+}
+
+#juno-fit {
+    width: 504px;
+    height: 422px;
+    flex-shrink: 0; 
+    background-color: #C5D5B3;
+    color: #FFFEF6; 
+    text-align: center;
+}
+
+#juno-social {
+    width: 504px;
+    height: 422px;
+    flex-shrink: 0; 
+    background-color: #E4D6AE;
+    color: #FFFEF6;
+    text-align: center;
+}
+
+/* Styles only applied to smaller screens */
+@media (max-width: 767px) {
+    *{
+        max-width: 767px;
+    }
+    
+    nav {
+        background-color: transparent;
+    }
+
+    .mobile-hidden {
+        display: none;
+    }
+}
+
+/* Styles only applied to bigger screens */
+@media (min-width: 768px) {
+
+    .desktop-hidden {
+        display: none;
+    }
+
+    body {
+        color: #8E4B44;
+        background-color: #FEFDF6;
+    }
+
+    nav {
+        background-color: #FEFDF6 !important;
+        font-family: Modern Era;
+        color: #000000 !important;
+    }
+
+    h2 {
+        font-family: Keroine;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
+    h3 {
+        font-family: Modern Era;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+    
+    p {
+        font-family: Modern Era;
+        font-size: 34px;
+        font-style: normal;
+        font-weight:lighter;
+        line-height: normal;
+    }
+    
+    a {
+        color: #9A675E;
+    }
+    
+    #banner {
+        width: 100%;
+    }
+    
+    #membership {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    #juno-club {
+        width: 504px;
+        height: 422px;
+        flex-shrink: 0; 
+        background-color: #CEA7A2;
+        color: #FFFEF6;
+        text-align: center;
+        border: #000000 5px;
+    }
+    
+    #juno-fit {
+        width: 504px;
+        height: 422px;
+        flex-shrink: 0; 
+        background-color: #C5D5B3;
+        color: #FFFEF6; 
+        text-align: center;
+    }
+    
+    #juno-social {
+        width: 504px;
+        height: 422px;
+        flex-shrink: 0; 
+        background-color: #E4D6AE;
+        color: #FFFEF6;
+        text-align: center;
+    }
+}
