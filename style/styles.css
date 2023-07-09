@@ -17,6 +17,46 @@ html {
     background-color: #0F0F0F;
 }
 
+/* ANIMATION */
+
+.animation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    z-index: 9999;
+    overflow: hidden;
+    animation: fade-in-image 2s ease-in-out forwards, fade-out-background 2s ease-in-out forwards;
+  }
+  
+  @keyframes fade-in-image {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  @keyframes fade-out-background {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  .fade-in-image.finished {
+    animation: none;
+  }
+  
+  .fade-in-image.finished + .website-content {
+    display: block;
+  }
+  
+  .animation-container {
+    animation-delay: 1s; /* Adjust the delay as needed */
+  }
+    
 nav {
     background-color: transparent !important;
     font-family: Modern Era;
