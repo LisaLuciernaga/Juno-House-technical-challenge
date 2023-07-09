@@ -12,7 +12,11 @@
     font-family: 'Keroine';
     src: url('keroine.ttf') format('truetype');
   } ---unable to find font online */
-  
+
+html {
+    background-color: #0F0F0F;
+}
+
 nav {
     background-color: transparent !important;
     font-family: Modern Era;
@@ -82,7 +86,6 @@ strong {
 /* banner img */
 #banner {
     width: 100%;
-    max-width: 800px;
     display: block;
     height: auto;
 }
@@ -119,6 +122,32 @@ strong {
 }
 
 /* COMMUNITY SECTION */
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  
+  .image-container img {
+    flex: 0 0 auto;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 8px;
+  }
+  
+  .square {
+    aspect-ratio: 1/1;
+    width: 64%;
+  }
+  
+  .rectangle {
+    aspect-ratio: 1/2;
+    width: 32%;
+  }
+
+
 #community-images {
     display: flex;
     flex-wrap: wrap;
@@ -158,18 +187,6 @@ strong {
     display: flex;
     flex-direction: column;
     width: 100%;
-}
-
-#membership-wrapper>div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
-    height: 217.698px;
-    flex-shrink: 0;
-    margin: 0pxå;
 }
 
 #membership-wrapper>div>p {
@@ -233,7 +250,7 @@ strong {
     top: 50px;
 }
 
-#house>img {
+.house-img-mobile {
     width: 100%;
     max-width: 800px;
     position: relative;
@@ -326,7 +343,7 @@ strong {
 }
 
 #footer {
-    position: absolute;
+    position: relative;
 }
 
 #links {
@@ -338,15 +355,10 @@ strong {
     padding: 0px;
 }
 
-
-
 /* ------ MEDIA QUERIES ------ */
-
-/* Styles only applied to smaller screens */
+/* STYLES APPLIED TO SMALLER VIEWPORTS */
 @media (max-width: 767px) {
-    *{
-        max-width: 767px;
-    }
+    *{ max-width: 767px; }
 
     .nav-banner {
         position: relative;
@@ -373,25 +385,42 @@ strong {
     .mobile-hidden {
         display: none;
     }
+
+    #membership-wrapper>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+        height: 217.698px;
+        flex-shrink: 0;
+        margin: 0px;
+    }
+
+
 }
 
-/* Styles only applied to bigger screens */
+/* STYLES APPLIED TO BIGGER VIEWPORTS */
 @media (min-width: 768px) {
+    .desktop-hidden { display: none;}
 
-    .desktop-hidden {
-        display: none;
+    .navbar {  
+        background-color: #FEFDF6;
+        font-family: Modern Era;
+        color: #000000 !important;
     }
+
+    ul>li { margin-left: 15px;}
+
+    #banner-logo { width: 50%; }
 
     body {
         color: #8E4B44;
-        /* background-color: #FEFDF6; */
-        background-color: grey;
-    }
-
-    nav {
-        background-color: #FEFDF6 !important;
-        font-family: Modern Era;
-        color: #000000 !important;
+        background-color: #FEFDF6;
+        border: #000000 solid 5px;
+        max-width: 1300px;
+        margin: auto;
     }
 
     h2 {
@@ -412,26 +441,79 @@ strong {
     
     p {
         font-family: Modern Era;
-        font-size: 34px;
+        font-size: 28px;
         font-style: normal;
         font-weight:lighter;
         line-height: normal;
     }
     
-    a {
-        color: #9A675E;
+    a { color: #9A675E;}
+
+    #about {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: -50px;
+        max-width: 1500px;
     }
+
+    #about-left {
+        width: 48%;
+    }
+
+    .philosophy {
+        width: 80%;
+        padding-top: 80px;
+    }
+
+    .philosophy>p { 
+        font-size: 28px;
+        width: 80%;
+    }
+
+    .image-scroll-container {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      
+      .image-wrapper {
+        display: inline-block;
+        vertical-align: top;
+        white-space: normal;
+      }
+      
+      .image-wrapper img {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+      }
     
     #membership {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
+
+    #membership-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #membership-wrapper>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin: 0px;
+        border: #000000 solid .5px;
+    }
     
     #juno-club {
-        width: 504px;
-        height: 422px;
-        flex-shrink: 0; 
+        width: 33%;
+        /* height: 422px; */
+        /* flex-shrink: 0;  */
         background-color: #CEA7A2;
         color: #FFFEF6;
         text-align: center;
@@ -439,7 +521,8 @@ strong {
     }
     
     #juno-fit {
-        width: 504px;
+        width: 33%;
+        max-width: 400px;
         height: 422px;
         flex-shrink: 0; 
         background-color: #C5D5B3;
@@ -448,11 +531,60 @@ strong {
     }
     
     #juno-social {
-        width: 504px;
+        width: 33%;
         height: 422px;
         flex-shrink: 0; 
         background-color: #E4D6AE;
         color: #FFFEF6;
         text-align: center;
+    }
+    
+    .agenda-scroll-container {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      
+    .agenda-wrapper {
+        display: flex;
+        flex-direction: row;
+      }
+      
+    .aganda-card {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: row;
+        margin-right: 10px; /* Adjust the margin as needed */
+      }
+      
+    .agenda-card>img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+      
+    #house {
+        position: relative;
+    }
+    
+    .house-img-desktop {
+        width: 100%;
+        max-width: 1000px;
+        position: relative;
+        top: -300px;
+      }
+
+    #juno-cafe {
+        background-color: #C5D5B3;
+        display: flex;
+        flex-direction: row;
+      }
+
+    #juno-cafe>img {
+        width: 50%;
+      }
+
+    .contact {
+        width: 100%;
     }
 }

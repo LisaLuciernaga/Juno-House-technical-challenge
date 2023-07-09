@@ -67,46 +67,93 @@
     </div>
 
     <div id="about" class="p10">
-        <h2>about</h2>
-        <img src="images/Group.svg" alt="playground">
-        <p>Home to <em>women who inspire,</em><br> Juno House is the place where synergies<br> and wellness merge,<br> and where New York meets Barcelona,<br> in design, lifestyle, and mood.</p>
+        <div id="about-left">
+            <h2>about</h2>
+            <img src="images/Group.svg" alt="playground">
+            <p>Home to <em>women who inspire,</em><br> Juno House is the place where synergies<br> and wellness merge,<br> and where New York meets Barcelona,<br> in design, lifestyle, and mood.</p>
+            <p class="mobile-hidden">Located on Diagonal and Aribau,<br> Juno House is the place for local<br> an international women<br> to collaborate, create synergies, and thrive.</p>
+        </div>
         
         <div class="philosophy">
             <img src="images/collab vs competition.png" alt="philosophy">
             <p><strong>Collaboration</strong> versus <s>competition</s><br>The philosophy that unites us, our north star.</p>
         </div>
 
-        <p class="mobile-hidden">Located on Diagonal and Aribau,<br> Juno House is the place for local<br> an international women<br> to collaborate, create synergies, and thrive.</p>
+        
     </div>
 
     <div id="community" class="p10">
         <h2>community</h2>
-        <div id="community-images">
-            <div class="image-wrapper-rec">
+        <!-- <div id="community-images desktop-hidden">
+            <div class="image-wrapper-rec desktop-hidden">
                 <img src="images/Rectangle 63.png" alt="63">
             </div>
-            <div class="image-wrapper-sq">
+            <div class="image-wrapper-sq desktop-hidden">
                 <img src="images/Rectangle 64.png" alt="64">
             </div>
-            <div class="image-wrapper-sq">
+            <div class="image-wrapper-sq desktop-hidden">
                 <img src="images/Rectangle 62.png" alt="62">
             </div>
-            <div class="image-wrapper-rec">
+            <div class="image-wrapper-rec desktop-hidden">
                 <img src="images/Rectangle 65.png" alt="65">
             </div>
-            <div class="image-wrapper-rec">
+            <div class="image-wrapper-rec desktop-hidden">
                 <img src="images/Rectangle 70.png" alt="70">
             </div>
-            <div class="image-wrapper-sq">
+            <div class="image-wrapper-sq desktop-hidden">
                 <img src="images/Rectangle 69.png" alt="69">
             </div>
-            <div class="image-wrapper-sq">
+            <div class="image-wrapper-sq desktop-hidden">
                 <img src="images/Rectangle 72.png" alt="72">
             </div>
-            <div class="image-wrapper-rec">
+            <div class="image-wrapper-rec desktop-hidden">
                 <img src="images/Rectangle 71.png" alt="71">
             </div>
-        </div>
+        </div> -->
+
+        <div class="image-container desktop-hidden">
+        
+            <img src="images/Rectangle 63.png" alt="Image 2" class="rectangle">
+            <img src="images/Rectangle 64.png" alt="Image 3" class="square">
+
+            <img src="images/Rectangle 62.png" alt="Image 3" class="square">
+            <img src="images/Rectangle 65.png" alt="Image 2" class="rectangle">
+            
+            <img src="images/Rectangle 70.png" alt="Image 2" class="rectangle">
+            <img src="images/Rectangle 69.png" alt="Image 3" class="square">
+            
+            <img src="images/Rectangle 72.png" alt="Image 3" class="square">
+            <img src="images/Rectangle 71.png" alt="Image 2" class="rectangle">
+          </div>
+          
+
+          <div class="mobile-hidden image-scroll-container">
+            <div class="image-wrapper">
+              <img src="images/Rectangle 63.png" alt="Image 1">
+            </div>
+            <div class="image-wrapper">
+              <img src="images/Rectangle 64.png" alt="Image 2">
+            </div>
+            <div class="image-wrapper">
+                <img src="images/Rectangle 62.png" alt="Image 3">
+              </div>
+              <div class="image-wrapper">
+                <img src="images/Rectangle 65.png" alt="Image 4">
+              </div>
+              <div class="image-wrapper">
+                <img src="images/Rectangle 70.png" alt="Image 5">
+              </div>
+              <div class="image-wrapper">
+                <img src="images/Rectangle 69.png" alt="Image 6">
+              </div>
+              <div class="image-wrapper">
+                <img src="images/Rectangle 72.png" alt="Image 7">
+              </div>
+              <div class="image-wrapper">
+                <img src="images/Rectangle 71.png" alt="Image 8">
+              </div>
+          </div>
+
         <div class="button-wrapper">
             <p><em>juno women</em> are smart, open-minded women from all walks of life.</p>
             <a class="mobile-hidden">( Book a tour )</a>
@@ -138,7 +185,9 @@
 
     <div id="agenda" class="p10">
         <h2>juno agenda</h2>
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Carousel for small screens -->
+        <div id="carouselExampleIndicators" class="carousel slide desktop-hidden" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -176,6 +225,49 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+
+        <div class="agenda-scroll-container mobile-hidden">
+            <div class="agenda-wrapper">
+                <div class="aganda-card">
+                <div class="agenda-text">
+                    <p>SPRING URBAN RETREAT</p>
+                    <p class="agenda-date">Friday, March 24th</p>
+                    <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
+                    <button type="button" class="agenda-btn btn btn-outline-secondary terracota-btn">Apply here</button>
+                </div>
+              <img src="images/IMG_agenda.png" alt="agenda 1">
+            </div>
+            <div class="aganda-card">
+                <div class="agenda-text">
+                    <p>SPRING URBAN RETREAT</p>
+                    <p class="agenda-date">Friday, March 24th</p>
+                    <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
+                    <button type="button" class="agenda-btn btn btn-outline-secondary terracota-btn">Apply here</button>
+                </div>
+              <img src="images/IMG_agenda.png" alt="agenda 1">
+            </div>
+            <div class="aganda-card">
+                <div class="agenda-text">
+                    <p>SPRING URBAN RETREAT</p>
+                    <p class="agenda-date">Friday, March 24th</p>
+                    <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
+                    <button type="button" class="agenda-btn btn btn-outline-secondary terracota-btn">Apply here</button>
+                </div>
+              <img src="images/IMG_agenda.png" alt="agenda 1">
+            </div>
+            <div class="aganda-card">
+                <div class="agenda-text">
+                    <p>SPRING URBAN RETREAT</p>
+                    <p class="agenda-date">Friday, March 24th</p>
+                    <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
+                    <button type="button" class="agenda-btn btn btn-outline-secondary terracota-btn">Apply here</button>
+                </div>
+              <img src="images/IMG_agenda.png" alt="agenda 1">
+            </div>
+            </div>
+
+        </div>
+          
           <button type="button" class="agenda-btn btn btn-outline-dark desktop-hidden">Go to agenda</button> 
     </div>
 
@@ -190,26 +282,24 @@
             <h3>Farinera</h3>
             <p id="farinera-p">Farinera Speakeasy bar, fireside chats, private dinners, self-care, boutique fitness, and family-friendly services for the women in constant evolution.</p>
         </div>
-        <img class="desktop-hidden" src="images/Juno House Club - Dibujo 2.png" alt="juno-house">
-        <img class="mobile-hidden" src="images/the-house.png" alt="the-house">
-        
+        <img class="desktop-hidden house-img-mobile" src="images/Juno House Club - Dibujo 2.png" alt="juno-house">
+        <img class="mobile-hidden house-img-desktop" src="images/Mapa.png" alt="the-house">
     </div>
 
     <div id="juno-cafe">
-        <img src="images/Banner mobile  cafe.png">
-        <!-- <div class="green-background">
+        <img class="desktop-hidden" src="images/Banner mobile  cafe.png">
+        <div class="green-background mobile-hidden">
             <h2>juno café</h2>
             <h2>seasonal & local food</h2>
             <a>( Book your table )</a>
         </div>
-        <img src="images/cafe.png" alt="two-plates"> -->
+        <img class="mobile-hidden" src="images/cafe.png" alt="two-plates">
     </div>
-
     <div id="footer" >
         <div class="terracota-bg">
             <h2 class="p10">Un lugar creado por y para mujeres. Club privado de socias.</h2>
             <h3 class="p10">¿Quieres saber más sobre nuestras novedades?</h3>
-            <form>
+            <form class="desktop-hidden">
                 <div class="mb-3">
                   <label for="inputEmail" class="form-label p10">Tu email</label>
                   <div id="email-input">
@@ -219,7 +309,7 @@
                 </div>
               </form>
             <p class="p10 mobile-hidden" id="si-quiero">Sí, quiero.</p>
-            <div class="contact p10">
+            <div class="contact p10 desktop-hidden">
                 <p>Contacto:<br> hola@junohouseclub.com<br> +34 626 977 077</p>
                 <a href="https://www.instagram.com/junohouseclub/"><img src="images/Iconos RRSS Mobile (2).svg"></a>
 
@@ -229,7 +319,7 @@
                 </a>
             </div>
         </div>
-            <img id="links" src="images/Captura de pantalla 2023-03-27 a las 13.27 2.png" alt="logo">
+            <img class="desktop-hidden" id="links" src="images/Captura de pantalla 2023-03-27 a las 13.27 2.png" alt="logo">
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
