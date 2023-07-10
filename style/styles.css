@@ -11,14 +11,14 @@
   /* @font-face {
     font-family: 'Keroine';
     src: url('keroine.ttf') format('truetype');
-  } ---unable to find font online */
+  } ---unable to find Keroine font online */
 
 html {
     background-color: #0F0F0F;
+    /* background-color: #8E4B44 */
 }
 
 /* ANIMATION */
-
 .animation-container {
     position: fixed;
     top: 0;
@@ -31,31 +31,36 @@ html {
     background-color: #000;
     z-index: 9999;
     overflow: hidden;
-    animation: fade-in-image 2s ease-in-out forwards, fade-out-background 2s ease-in-out forwards;
+    animation: fade-in-image 1s ease-in-out forwards, fade-out-background 2s ease-in-out forwards;
   }
   
-  @keyframes fade-in-image {
+@keyframes fade-in-image {
     0% { opacity: 0; }
+    50% { opacity: 1; }
+    99% {opacity: 0;}
+    100% { 
+        opacity: 0;
+        z-index: -999999;
+    }
+  }
+
+  .fade-in-image {
+    max-width: 1300px;
+  }
+  
+@keyframes fade-out-background {
+    0% { opacity: 1; }
     50% { opacity: 1; }
     100% { opacity: 0; }
   }
   
-  @keyframes fade-out-background {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-  }
-  
-  .fade-in-image.finished {
+.fade-in-image.finished {
     animation: none;
-  }
+}
   
-  .fade-in-image.finished + .website-content {
-    display: block;
-  }
+.fade-in-image.finished + .website-content {display: block;}
   
-  .animation-container {
-    animation-delay: 1s; /* Adjust the delay as needed */
-  }
+.animation-container {animation-delay: 1s; }
     
 nav {
     background-color: transparent !important;
@@ -74,7 +79,10 @@ body {
     border-radius: 17px;
     border-color: #8E4B44;
     text-decoration: none;
+    margin: auto;
 }
+
+.terracota-btn:active .terracota-btn:focus{background-color: #CEA7A2;}
 
 .white-btn {
     color: #FFFEF6 !important;
@@ -83,13 +91,6 @@ body {
     text-decoration: none;
 }
 
-.terracota-btn:active .terracota-btn:focus {
-    background-color: #CEA7A2;
-}
-
-.p10 {
-    padding: 10px;
-}
 
 h2 {
     font-family: Keroine;
@@ -109,13 +110,11 @@ p {
     padding-top: 10px;
 }
 
-a {
-    color: #9A675E;
-}
+.p10 {padding: 10px;}
 
-strong {
-    font-family: Modern Era Bold;
-}
+a {color: #9A675E;}
+
+strong {font-family: Modern Era Bold;}
 
 /* div container with banner img and white logo */
 .banner {
@@ -138,6 +137,7 @@ strong {
     transform: translate(-50%, -50%);
 }
 
+/* Container with image and text */
 .philosophy {
     margin: 5px;
     position: relative;
@@ -162,7 +162,6 @@ strong {
 }
 
 /* COMMUNITY SECTION */
-
 .image-container {
     display: flex;
     flex-wrap: wrap;
@@ -170,23 +169,22 @@ strong {
     align-items: flex-start;
   }
   
-  .image-container img {
+.image-container img {
     flex: 0 0 auto;
     height: auto;
     object-fit: cover;
     margin-bottom: 8px;
   }
   
-  .square {
+.square {
     aspect-ratio: 1/1;
     width: 64%;
   }
   
-  .rectangle {
+.rectangle {
     aspect-ratio: 1/2;
     width: 32%;
   }
-
 
 #community-images {
     display: flex;
@@ -262,21 +260,13 @@ strong {
 }
 
 /* AGENDA SECTION */
-.carousel-item {
-    padding: 50px;
-}
+.carousel-item {padding: 50px;}
 
-.carousel-item>p {
-    color: #000000;
-}
+.carousel-item>p {color: #000000;}
 
-.agenda-date {
-    color: #8E4B44 !important
-}
+.agenda-date {color: #8E4B44 !important}
 
-.carousel-control-next {
-    color: #8E4B44 !important;
-}
+.carousel-control-next {color: #8E4B44 !important;}
 
 /* HOUSE SECTION */
 #house {
@@ -327,14 +317,10 @@ strong {
 } 
 
 /* HOUSE SECTION */
-#juno-cafe>img {
-    width: 100%;
-}
+#juno-cafe>img {width: 100%;}
 
 /* FOOTER SECTION */
-.terracota-bg {
-    background-color: #9A675E;
-}
+.terracota-bg {background-color: #9A675E;}
 
 .form-control {
     background-color: #9A675E;
@@ -361,9 +347,7 @@ strong {
     line-height: normal;
 }
 
-.form-control::placeholder { 
-    color: #FFFEF6;
-  }
+.form-control::placeholder { color: #FFFEF6;}
 
 #email-input {
     display: flex !important;
@@ -382,9 +366,7 @@ strong {
     color: #FFFEF6;
 }
 
-#footer {
-    position: relative;
-}
+#footer {position: relative;}
 
 #links {
     width: 100%;
@@ -422,9 +404,7 @@ strong {
         border: 0px;
     }
 
-    .mobile-hidden {
-        display: none;
-    }
+    .mobile-hidden {display: none;}
 
     #membership-wrapper>div {
         display: flex;
@@ -437,8 +417,6 @@ strong {
         flex-shrink: 0;
         margin: 0px;
     }
-
-
 }
 
 /* STYLES APPLIED TO BIGGER VIEWPORTS */
@@ -458,7 +436,6 @@ strong {
     body {
         color: #8E4B44;
         background-color: #FEFDF6;
-        border: #000000 solid 5px;
         max-width: 1300px;
         margin: auto;
     }
@@ -496,9 +473,7 @@ strong {
         max-width: 1500px;
     }
 
-    #about-left {
-        width: 48%;
-    }
+    #about-left { width: 48%;}
 
     .philosophy {
         width: 80%;
@@ -594,7 +569,7 @@ strong {
         flex: 0 0 auto;
         display: flex;
         flex-direction: row;
-        margin-right: 10px; /* Adjust the margin as needed */
+        margin-right: 10px;
       }
       
     .agenda-card>img {
@@ -603,9 +578,7 @@ strong {
         object-fit: contain;
       }
       
-    #house {
-        position: relative;
-    }
+    #house {position: relative;}
     
     .house-img-desktop {
         width: 100%;
@@ -620,11 +593,7 @@ strong {
         flex-direction: row;
       }
 
-    #juno-cafe>img {
-        width: 50%;
-      }
+    #juno-cafe>img {width: 50%;}
 
-    .contact {
-        width: 100%;
-    }
+    .contact {width: 100%;}
 }
