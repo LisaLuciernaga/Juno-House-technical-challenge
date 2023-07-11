@@ -80,6 +80,7 @@ body {
     border-color: #8E4B44;
     text-decoration: none;
     margin: auto;
+    font-size: 20px;
 }
 
 .terracota-btn:active .terracota-btn:focus{background-color: #CEA7A2;}
@@ -512,6 +513,7 @@ strong {font-family: Modern Era Bold;}
     #membership-wrapper {
         display: flex;
         flex-direction: row;
+        width: 101%;
     }
 
     #membership-wrapper>div {
@@ -522,13 +524,14 @@ strong {font-family: Modern Era Bold;}
         justify-content: center;
         flex-shrink: 0;
         margin: 0px;
+        padding: 0px;
         border: #000000 solid .5px;
     }
     
     #juno-club {
         width: 33%;
-        /* height: 422px; */
-        /* flex-shrink: 0;  */
+        height: 422px;
+        flex-shrink: 0; 
         background-color: #CEA7A2;
         color: #FFFEF6;
         text-align: center;
@@ -537,7 +540,6 @@ strong {font-family: Modern Era Bold;}
     
     #juno-fit {
         width: 33%;
-        max-width: 400px;
         height: 422px;
         flex-shrink: 0; 
         background-color: #C5D5B3;
@@ -552,6 +554,8 @@ strong {font-family: Modern Era Bold;}
         background-color: #E4D6AE;
         color: #FFFEF6;
         text-align: center;
+        margin: 0px;
+        padding: 0px;
     }
     
     .agenda-scroll-container {
